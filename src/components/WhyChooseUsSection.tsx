@@ -4,17 +4,17 @@ const features = [
   {
     icon: Award,
     title: "Experienced Professionals",
-    description: "Working as understanding professionale about housekeepdi an chenged. Our certified experts bring years of industry experience."
+    description: "Our certified experts bring years of industry experience and stay current with the latest tax laws and financial regulations."
   },
   {
     icon: DollarSign,
     title: "Transparent Pricing",
-    description: "Our experience garantio empreing a supportechizable d nitentian process. No hidden fees, clear pricing structure upfront."
+    description: "We believe in clear, upfront pricing with no hidden fees. You'll know exactly what to expect from our professional services."
   },
   {
     icon: Heart,
     title: "Personalized Service",
-    description: "Our Postde orenence Anangence as aparmnient, designino calixity prowases aev fest atou chatamende and ad advenues."
+    description: "Every client receives tailored solutions designed specifically for their unique financial situation and business needs."
   }
 ];
 

@@ -4,22 +4,22 @@ const services = [
   {
     icon: Calculator,
     title: "Tax Planning & Filing",
-    description: "Tax prorated reductions that retain deductions. Professional tax preparation and strategic planning to minimize your liability."
+    description: "Professional tax preparation and strategic planning to minimize your liability while maximizing deductions and compliance."
   },
   {
     icon: Shield,
     title: "Audit & Compliance", 
-    description: "Maritime Salmetacemme messneus urk prettitut. Comprehensive audit services and regulatory compliance assistance."
+    description: "Comprehensive audit services and regulatory compliance assistance to ensure your business meets all financial requirements."
   },
   {
     icon: TrendingUp,
     title: "Business Finance Consulting",
-    description: "Witkling gaze settling to wwertist bertitent. Strategic financial planning and business growth consulting services."
+    description: "Strategic financial planning and business growth consulting to help you make informed decisions and achieve your goals."
   },
   {
     icon: Users,
     title: "Payroll & VAT/GST Advisory",
-    description: "Personaler or service, all tor erte tour tov. Complete payroll management and tax advisory services."
+    description: "Complete payroll management and tax advisory services to streamline your operations and ensure compliance."
   }
 ];
 

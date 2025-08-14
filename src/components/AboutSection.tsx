@@ -21,9 +21,9 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Laser in puritatas professionales, resports at in noticia morning forwm hat invested 
-              in ovarianing, general, streetit, mocielor und meuwifor. Our team brings decades of 
-              combined experience in tax planning, financial consulting, and business advisory services.
+              At Rundag Business, we are dedicated professionals who specialize in providing comprehensive 
+              tax and financial services. Our team brings decades of combined experience in tax planning, 
+              financial consulting, and business advisory services to help you succeed.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">

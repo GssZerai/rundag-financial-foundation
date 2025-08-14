@@ -13,8 +13,8 @@ const Footer = () => {
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-rundag-blue-foreground/80 leading-relaxed">
-              With peis itseatonly save, gauntmalind to deres, fore and money cam services. 
-              Professional tax and finance solutions for your business success.
+              Professional tax and financial services you can trust. We help businesses and individuals 
+              achieve financial success through expert guidance and personalized solutions.
             </p>
           </div>
 
