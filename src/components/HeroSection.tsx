@@ -17,10 +17,20 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button variant="rundag-cta" size="lg" className="text-base px-8 py-6">
+            <Button 
+              variant="rundag-cta" 
+              size="lg" 
+              className="text-base px-8 py-6"
+              onClick={() => window.open("tel:+251988743535", "_self")}
+            >
               Book Free Consultation
             </Button>
-            <Button variant="rundag-outline" size="lg" className="text-base px-8 py-6">
+            <Button 
+              variant="rundag-outline" 
+              size="lg" 
+              className="text-base px-8 py-6"
+              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+            >
               Our Services
             </Button>
           </div>

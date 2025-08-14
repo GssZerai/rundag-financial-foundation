@@ -11,7 +11,11 @@ const Header = () => {
             <Phone className="h-4 w-4" />
             <span>+251 988743535</span>
           </div>
-          <Button variant="rundag" size="sm">
+          <Button 
+            variant="rundag" 
+            size="sm"
+            onClick={() => window.open("tel:+251988743535", "_self")}
+          >
             Book Consultation
           </Button>
         </div>
@@ -45,7 +49,11 @@ const Header = () => {
           </a>
         </nav>
 
-        <Button variant="rundag" className="hidden md:inline-flex">
+        <Button 
+          variant="rundag" 
+          className="hidden md:inline-flex"
+          onClick={() => window.open("tel:+251988743535", "_self")}
+        >
           Book Consultation
         </Button>
       </div>

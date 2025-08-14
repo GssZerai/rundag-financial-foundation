@@ -18,6 +18,7 @@ const CTASection = () => {
             variant="rundag-outline" 
             size="lg" 
             className="bg-rundag-red-foreground text-rundag-red border-rundag-red-foreground hover:bg-transparent hover:text-rundag-red-foreground hover:border-rundag-red-foreground text-lg px-12 py-6 font-semibold"
+            onClick={() => window.open("tel:+251988743535", "_self")}
           >
             Book Consultation
           </Button>

@@ -33,7 +33,12 @@ const AboutSection = () => {
             </p>
 
             <div className="pt-4">
-              <Button variant="rundag" size="lg" className="px-8">
+              <Button 
+                variant="rundag" 
+                size="lg" 
+                className="px-8"
+                onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              >
                 Learn More About Us
               </Button>
             </div>
