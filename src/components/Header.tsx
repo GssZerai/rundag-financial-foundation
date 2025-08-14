@@ -9,7 +9,7 @@ const Header = () => {
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-2">
             <Phone className="h-4 w-4" />
-            <span>+1-528-738-7830</span>
+            <span>+25 988743535</span>
           </div>
           <Button variant="rundag" size="sm">
             Book Consultation
