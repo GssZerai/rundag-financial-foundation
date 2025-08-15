@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 const Header = () => {
   return (
@@ -7,13 +7,22 @@ const Header = () => {
       {/* Top Bar */}
       <div className="bg-rundag-blue text-rundag-blue-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <a 
-            href="tel:+251988743535" 
-            className="flex items-center gap-2 hover:text-rundag-blue-foreground/80 transition-colors cursor-pointer"
-          >
-            <Phone className="h-4 w-4" />
-            <span>+251 988743535</span>
-          </a>
+          <div className="flex items-center gap-6">
+            <a 
+              href="mailto:info@rundagbusiness.com" 
+              className="flex items-center gap-2 hover:text-rundag-blue-foreground/80 transition-colors cursor-pointer"
+            >
+              <Mail className="h-4 w-4" />
+              <span>info@rundagbusiness.com</span>
+            </a>
+            <a 
+              href="tel:+251988743535" 
+              className="flex items-center gap-2 hover:text-rundag-blue-foreground/80 transition-colors cursor-pointer"
+            >
+              <Phone className="h-4 w-4" />
+              <span>+251 988743535</span>
+            </a>
+          </div>
           <Button 
             variant="rundag" 
             size="sm"
