@@ -44,10 +44,24 @@ const Header = () => {
           <a href="#services" className="text-foreground hover:text-rundag-blue transition-colors font-medium">
             Services
           </a>
-          <a href="#resources" className="text-foreground hover:text-rundag-blue transition-colors font-medium">
+          <a 
+            href="#services" 
+            className="text-foreground hover:text-rundag-blue transition-colors font-medium cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Resources
           </a>
-          <a href="#contact" className="text-foreground hover:text-rundag-blue transition-colors font-medium">
+          <a 
+            href="#cta" 
+            className="text-foreground hover:text-rundag-blue transition-colors font-medium cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Contact
           </a>
         </nav>
