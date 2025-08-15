@@ -64,11 +64,11 @@ const Header = () => {
             Resources
           </a>
           <a 
-            href="#cta" 
+            href="#contact" 
             className="text-foreground hover:text-rundag-blue transition-colors font-medium cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Contact
