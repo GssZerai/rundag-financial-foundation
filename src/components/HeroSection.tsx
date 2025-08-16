@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-handshake-ethiopian.jpg";
+import ConsultationBooking from "./ConsultationBooking";
 
 const HeroSection = () => {
   return (
@@ -17,14 +18,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button 
-              variant="rundag-cta" 
-              size="lg" 
-              className="text-base px-8 py-6"
-              onClick={() => window.open("tel:+251988743535", "_self")}
-            >
-              Book Free Consultation
-            </Button>
+            <ConsultationBooking />
             <Button 
               variant="rundag-outline" 
               size="lg" 
