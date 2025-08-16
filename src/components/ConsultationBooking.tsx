@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Calendar, Clock } from "lucide-react";
 import { toast } from "sonner";
-import { getSupabase } from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ConsultationFormData {
   name: string;
@@ -45,7 +45,7 @@ const ConsultationBooking = () => {
     setIsSubmitting(true);
 
     try {
-      const supabase = getSupabase();
+      // Supabase is already initialized
       const { error } = await supabase
         .from('consultations')
         .insert([
