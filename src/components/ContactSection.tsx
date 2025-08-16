@@ -105,7 +105,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Office</h4>
                     <p className="text-muted-foreground">
-                      Mekelle, Tigray<br />
+                      Addis Ababa, around Kokeb Building 24<br />
                       Ethiopia
                     </p>
                   </div>
