@@ -37,7 +37,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/b59e6ba8-3fde-435c-9459-d31683cabebf.png" 
+            src="./lovable-uploads/b59e6ba8-3fde-435c-9459-d31683cabebf.png" 
             alt="Rundag Business Logo" 
             className="h-12 w-auto"
           />

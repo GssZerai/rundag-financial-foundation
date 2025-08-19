@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo & Bio */}
           <div className="lg:col-span-1">
             <img 
-              src="/lovable-uploads/b59e6ba8-3fde-435c-9459-d31683cabebf.png" 
+              src="./lovable-uploads/b59e6ba8-3fde-435c-9459-d31683cabebf.png" 
               alt="Rundag Business Logo" 
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
