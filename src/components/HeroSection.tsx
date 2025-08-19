@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-handshake-ethiopian.jpg";
 import ConsultationBooking from "./ConsultationBooking";
+import ImageGenerator from "./ImageGenerator";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(heroImage);
+  const [showImageGenerator, setShowImageGenerator] = useState(false);
+
+  const handleImageGenerated = (imageUrl: string) => {
+    setCurrentImage(imageUrl);
+    setShowImageGenerator(false);
+  };
+
   return (
     <section id="home" className="relative bg-gradient-to-br from-background to-secondary py-20 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
@@ -33,10 +43,23 @@ const HeroSection = () => {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-rundag-blue/20 to-rundag-red/20 rounded-2xl blur-3xl"></div>
           <img 
-            src={heroImage} 
+            src={currentImage} 
             alt="Professional business consultation" 
-            className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
+            className="relative rounded-2xl shadow-2xl w-full h-auto object-cover cursor-pointer"
+            onClick={() => setShowImageGenerator(!showImageGenerator)}
           />
+          {showImageGenerator && (
+            <div className="absolute top-0 left-0 w-full h-full bg-background/95 backdrop-blur-sm rounded-2xl p-4 overflow-y-auto">
+              <ImageGenerator onImageGenerated={handleImageGenerated} />
+              <Button 
+                variant="outline" 
+                onClick={() => setShowImageGenerator(false)}
+                className="w-full mt-4"
+              >
+                Cancel
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>
