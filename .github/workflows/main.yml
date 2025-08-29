@@ -1,0 +1,46 @@
+name: Build and commit dist to dist-output branch
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Publish dist to dist-output branch
+        env:
+          REPO: ${{ github.repository }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git clone --depth=1 https://x-access-token:${TOKEN}@github.com/${REPO} repo-dist
+          cd repo-dist
+          if git show-ref --quiet refs/heads/dist-output; then
+            git checkout dist-output
+            git rm -rf .
+          else
+            git checkout --orphan dist-output
+            git rm -rf .
+          fi
+          cp -a ../dist/. .
+          git add -A
+          if git diff --quiet --cached; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update dist from build"
+            git push --force https://x-access-token:${TOKEN}@github.com/${REPO} HEAD:dist-output
+          fi
