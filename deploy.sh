@@ -9,8 +9,8 @@ set -euo pipefail
 # detects common static output folders (build, dist, out) and copies their
 # contents into the repo root while excluding .git and node_modules.
 
-WORKDIR="$(cd ""$(dirname "$0")" && pwd)"
-BRANCH=""${1:-main}"
+WORKDIR="$(cd "$(dirname "$0")" && pwd)"
+BRANCH="${1:-main}"
 
 echo "Starting deploy in $WORKDIR (branch: $BRANCH)"
 cd "$WORKDIR" || { echo "Cannot cd to $WORKDIR"; exit 1; }
@@ -28,7 +28,8 @@ if command -v npm >/dev/null 2>&1; then
   echo "Running build..."
   npm run build || { echo "npm run build failed"; exit 1; }
 else
-  echo "Warning: npm not found in PATH. If you cannot run npm on the server, build locally and upload the build output."i
+  echo "Warning: npm not found in PATH. If you cannot run npm on the server, build locally and upload the build output."
+fi
 
 # Detect build output folder
 OUT_DIR=""

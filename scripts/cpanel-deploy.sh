@@ -41,9 +41,14 @@ else
   echo "No build script found in package.json, skipping build step"
 fi
 
-# If build output lands in a folder like build/ or dist/, optionally move it into docroot:
-# Uncomment and edit the line below if your build outputs to 'build' or 'dist' and you want that served directly.
-# BUILD_DIR="build" && [ -d "$BUILD_DIR" ] && rsync -a --delete "$BUILD_DIR"/ "$TARGET"/
+# Copy build output to public_html for serving
+BUILD_DIR="dist"
+if [ -d "$BUILD_DIR" ]; then
+  echo "Copying build files from $BUILD_DIR to $TARGET"
+  rsync -a --delete "$BUILD_DIR"/ "$TARGET"/
+else
+  echo "Warning: No dist folder found. Build may have failed."
+fi
 
 # Fix permissions (common cPanel-friendly defaults)
 find "$TARGET" -type d -exec chmod 755 {} \;
